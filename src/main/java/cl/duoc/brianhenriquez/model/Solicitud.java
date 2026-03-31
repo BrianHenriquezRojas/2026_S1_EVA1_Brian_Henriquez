@@ -12,6 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor  
 public class Solicitud {
+    
+    @NotNull(message = "El id no puede ser nulo")
+    private Long id;
 
     @NotBlank(message = "El nombre del paciente es obligatorio")
     private String nombrePaciente;

@@ -1,5 +1,7 @@
 package cl.duoc.brianhenriquez.model;
 
-public class Prioridad {
-
+public enum Prioridad {
+    BAJA,
+    MEDIA,
+    ALTA
 }

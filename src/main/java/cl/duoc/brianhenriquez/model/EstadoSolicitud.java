@@ -1,5 +1,8 @@
 package cl.duoc.brianhenriquez.model;
 
-public class EstadoSolicitud {
-
+public enum EstadoSolicitud {
+    PENDIENTE,
+    EN_PROCESO,
+    ATENDIDA,
+    CANCELADA
 }
