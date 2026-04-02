@@ -12,6 +12,7 @@ import cl.duoc.brianhenriquez.model.Solicitud;
 
 @Repository
 public class SolicitudRepository {
+<<<<<<< HEAD
    private final Map<Long, Solicitud> baseDatos = new HashMap<>();
     private Long contadorId = 1L;
 
@@ -40,6 +41,29 @@ public class SolicitudRepository {
 
     public boolean eliminar(Long id) {
         return baseDatos.remove(id) != null;
+=======
+    private final Map<Long, Solicitud> solicitudStore = new HashMap<>();
+
+    public List<Solicitud> findAll(){
+        return new ArrayList<>(solicitudStore.values());
+    }
+
+    public Optional<Solicitud> findById(Long id){
+        return Optional.ofNullable(solicitudStore.get(id));
+    }
+
+    public Solicitud save(Solicitud solicitud){
+        solicitudStore.put(solicitud.getId(), solicitud);
+        return solicitud;
+    }
+
+    public void deleteById(Long id){
+        solicitudStore.remove(id);
+    }
+
+    public boolean existsById(Long id){
+        return solicitudStore.containsKey(id);
+>>>>>>> fdd4e13ff2b6e2d96fe8124281f543848fc04a75
     }
 
 }
